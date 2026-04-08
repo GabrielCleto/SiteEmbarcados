@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>CSS Template - Sistemas Embarcados</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+
+        /* Estilo do cabeçalho */
+        header {
+            background-color: #00979C;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+
+        /* Menu de navegação à esquerda */
+        nav {
+            float: left;
+            width: 30%;
+            height: 450px; /* Aumentei a altura para acomodar melhor o conteúdo */
+            background: #e6f4f4;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-bottom: 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #006468;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #00979C;
+        }
+
+        /* Conteúdo principal à direita (onde o site vai abrir) */
+        article {
+            float: left;
+            padding: 0; /* Removido padding para o site ocupar tudo */
+            width: 70%;
+            background-color: #f1f1f1;
+            height: 450px;
+            overflow: hidden; /* Evita barras de rolagem duplas */
+        }
+
+        /* Estilo do Iframe */
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Limpar o float após as colunas */
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Estilo do rodapé */
+        footer {
+            background-color: #006468;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        /* Responsividade */
+        @media (max-width: 600px) {
+            nav, article {
+                width: 100%;
+                height: auto;
+            }
+            article {
+                height: 400px; /* Altura fixa no celular para o iframe aparecer */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h2>Sistemas Embarcados</h2>
+</header>
+
+<section>
+    <nav>
+        <h3>Links</h3>
+        <ul>
+            <li><a href="https://www.arduino.cc/" target="conteudo">Arduino UNO</a></li>
+            <li><a href="https://victorvision.com.br/blog/placa-esp32/" target="conteudo">Esp32</a></li>
+            <li><a href="https://www.makerhero.com/categoria/raspberry-pi/" target="conteudo">Raspberry Pi</a></li>
+            <li><a href="https://pt.wikipedia.org/wiki/Sistema_embarcado" target="conteudo">O que é Embarcados? (Wiki)</a></li>
+        </ul>
+    </nav>
+    
+    <article>
+        <iframe name="conteudo" src="about:blank">
+        </iframe>
+    </article>
+</section>
+
+<footer>
+  <p>Gabriel Cleto - 2026</p>
+</footer>
+
+</body>
+</html>
